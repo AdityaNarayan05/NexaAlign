@@ -1,12 +1,15 @@
-// import React from "react"
-// import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom"
-
-import Login from "./login"
+import React from "react"
+import { Routes, Route, BrowserRouter } from "react-router-dom"
+import Login from "./Login"
+import Dashboard from "./Dashboard"
 
 function App() {
   return (
- 
-<Login/>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Dashboard/>} /></Routes>
+      <Route path='login' element={<Login/>}></Route>
+    </BrowserRouter>
   )
 }
 
